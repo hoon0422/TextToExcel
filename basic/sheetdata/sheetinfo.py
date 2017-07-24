@@ -56,23 +56,19 @@ class MissingValueInfo(SheetInfo[str]):
                     value, it will separate with white spaces.
         """
         missing_values = value.split()
+        data = sheet.range('A1').expand().options(ndim=2).value
 
-        r = sheet.range('A1').end('right').end('down')
-        rows, cols = r.row, r.column
-        if rows == 1048576:
-            rows = (0 if sheet.range('A1').value == None else 1)
-        if cols == 16384:
-            cols = (0 if sheet.range('A1').value == None else 1)
+        for row in range(len(data)):
+            for col in range(len(data[row])):
+                for mv in missing_values:
+                    try:
+                        if float(mv) == data[row][col]:
+                            data[row][col] = None
+                    except:
+                        if mv == data[row][col]:
+                            data[row][col] = None
 
-        for row, col in product(range(rows), range(cols)):
-            v = sheet.cells[row, col].value
-            for mv in missing_values:
-                try:
-                    if float(mv) == v:
-                        sheet.range((row + 1, col + 1)).value = None
-                except:
-                    if mv == v:
-                        sheet.range((row + 1, col + 1)).value = None
+        sheet.range((1,1)).value = data
 
     @property
     def info_type(self) -> type:
