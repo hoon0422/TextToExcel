@@ -4,7 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file" />
+    <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/file/__init__.py" afterPath="$PROJECT_DIR$/basic/file/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/file/files.py" afterPath="$PROJECT_DIR$/basic/file/files.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" afterPath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text_to_excel.py" afterPath="$PROJECT_DIR$/text_to_excel.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +25,8 @@
     <SUITE FILE_PATH="coverage/TextToExcel$template.coverage" NAME="template Coverage Results" MODIFIED="1499891390325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui_2" />
     <SUITE FILE_PATH="coverage/TextToExcel$sheetinfo__1_.coverage" NAME="sheetinfo (1) Coverage Results" MODIFIED="1499972292088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui_2" />
     <SUITE FILE_PATH="coverage/TextToExcel$Unittests_in_test_py.coverage" NAME="Unittests in test.py Coverage Results" MODIFIED="1500171897118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Text_to_Excel$make_test_txt.coverage" NAME="make_test_txt Coverage Results" MODIFIED="1500868081263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_files" />
+    <SUITE FILE_PATH="coverage/Text_to_Excel$text_to_excel.coverage" NAME="text_to_excel Coverage Results" MODIFIED="1500870899903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TextToExcel$file.coverage" NAME="file Coverage Results" MODIFIED="1499654881984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
     <SUITE FILE_PATH="coverage/TextToExcel$File.coverage" NAME="File Coverage Results" MODIFIED="1499114423251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
     <SUITE FILE_PATH="coverage/TextToExcel$data.coverage" NAME="data Coverage Results" MODIFIED="1499138216866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
@@ -45,44 +52,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="template.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/template.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-              <folding>
-                <element signature="e#102#131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python36/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11160">
-              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datatable.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gui/datatable.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text_to_excel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="text_to_excel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/text_to_excel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1050">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="e#400#429#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,8 +67,68 @@
       <file leaf-file-name="sheetinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetinfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="71" column="53" lean-forward="false" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+            <state relative-caret-position="202">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list2d.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/list2d.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2304">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/win32com/client/build.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/file/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dynamic.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/win32com/client/dynamic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sheetdata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetdata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/xlwings/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="766">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,45 +137,10 @@
       <file leaf-file-name="files.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/file/files.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5760">
-              <caret line="165" column="34" lean-forward="false" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
+            <state relative-caret-position="930">
+              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
               <folding>
                 <element signature="e#78#101#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainwindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/mainwindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2124">
-              <caret line="64" column="52" lean-forward="false" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sheetinfo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/sheetinfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
-              <folding>
-                <element signature="e#100#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dialogs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/dialogs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3888">
-              <caret line="117" column="46" lean-forward="false" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
-              <folding>
-                <element signature="e#50#79#0" expanded="true" />
-                <marker date="1500174143518" expanded="true" signature="106:430" ph="import ..." />
               </folding>
             </state>
           </provider>
@@ -204,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sheetdata/sheetinfo.py" />
         <option value="$PROJECT_DIR$/file/errors.py" />
         <option value="$PROJECT_DIR$/sheetdata/sheetdata.py" />
         <option value="$PROJECT_DIR$/file/matrix.py" />
@@ -248,13 +249,14 @@
         <option value="$PROJECT_DIR$/gui/messages.py" />
         <option value="$PROJECT_DIR$/gui/sheetkeyword.py" />
         <option value="$PROJECT_DIR$/TextToExcel.py" />
-        <option value="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/basic/file/files.py" />
         <option value="$PROJECT_DIR$/gui/sheetinfo.py" />
         <option value="$PROJECT_DIR$/gui/template.py" />
-        <option value="$PROJECT_DIR$/text_to_excel.py" />
         <option value="$PROJECT_DIR$/gui/dialogs.py" />
+        <option value="$PROJECT_DIR$/test_files/make_test_txt.py" />
+        <option value="$PROJECT_DIR$/text_to_excel.py" />
+        <option value="$PROJECT_DIR$/basic/file/files.py" />
+        <option value="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" />
       </list>
     </option>
   </component>
@@ -288,40 +290,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
+              <option name="myItemId" value="test_files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -331,29 +333,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sheetdata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TextToExcel" />
+              <option name="myItemId" value="Text to Excel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -367,12 +351,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/basic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
@@ -410,25 +394,6 @@
       <module name="TextToExcel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui_2/mainwindow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="list2d" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/basic_2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TextToExcel" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/basic_2/list2d.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -483,6 +448,25 @@
       <module name="TextToExcel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text_to_excel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="make_test_txt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_files" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TextToExcel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_files/make_test_txt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -638,18 +622,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.mainwindow" />
-      <item index="1" class="java.lang.String" itemvalue="Python.list2d" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TextToExcel" />
-      <item index="4" class="java.lang.String" itemvalue="Python.text_to_excel" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TextToExcel" />
+      <item index="3" class="java.lang.String" itemvalue="Python.text_to_excel" />
+      <item index="4" class="java.lang.String" itemvalue="Python.make_test_txt" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.text_to_excel" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mainwindow" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TextToExcel" />
-        <item index="4" class="java.lang.String" itemvalue="Python.list2d" />
+        <item index="1" class="java.lang.String" itemvalue="Python.make_test_txt" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mainwindow" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TextToExcel" />
       </list>
     </recent_temporary>
   </component>
@@ -721,17 +705,17 @@
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2116" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18836713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1905016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32568306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32568306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -754,6 +738,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/basic/file/__init__.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/basic/file/__init__.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/basic/file/__init__.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -761,70 +762,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="69" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://Python/#C:/Users/yhjeo/Desktop/dev/TextToExcel/basic/Files.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#C:/Users/yhjeo/Desktop/dev/TextToExcel/basic/Files.py</OriginalElement>
-          <nodes>
-            <node x="" y="">_collections_abc.Hashable</node>
-            <node x="" y="">basic.Files.ExcelResource</node>
-            <node x="" y="">basic.Files.DataFile</node>
-            <node x="" y="">basic.Files.DataGroup</node>
-            <node x="" y="">basic.Files.ExcelFile</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="453.0" y="279.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/#C:/Users/yhjeo/Desktop/dev/TextToExcel/gui/DataList.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#C:/Users/yhjeo/Desktop/dev/TextToExcel/gui/DataList.py</OriginalElement>
-          <nodes>
-            <node x="" y="">PyQt5.QtWidgets.QAbstractItemView.QAbstractItemView</node>
-            <node x="" y="">PyQt5.QtWidgets.QListView.QListView</node>
-            <node x="" y="">PyQt5.QtWidgets.QAbstractScrollArea.QAbstractScrollArea</node>
-            <node x="" y="">PyQt5.QtCore.QObject.QObject</node>
-            <node x="" y="">PyQt5.QtWidgets.QWidget.QWidget</node>
-            <node x="" y="">object</node>
-            <node x="" y="">_collections_abc.Hashable</node>
-            <node x="" y="">PyQt5.QtWidgets.QListWidget.QListWidget</node>
-            <node x="" y="">PyQt5.QtGui.QPaintDevice.QPaintDevice</node>
-            <node x="" y="">PyQt5.QtWidgets.QFrame.QFrame</node>
-            <node x="" y="">_collections_abc.Sized</node>
-            <node x="" y="">gui.DataList.DataListWidget</node>
-            <node x="" y="">gui.DataList.DataList</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0486842105263159" x="178.0" y="456.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/data.py" />
     <entry file="uml://Python/#C:/Users/yhjeo/odrive/[G] dudgns0422/dev/TextToExcel/file/file.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -864,20 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5364">
           <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/win32com/client/dynamic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6696">
-          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/xlwings/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1210,14 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/list2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/datalist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -1239,14 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/file/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -1254,25 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1120166012/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="890" column="6" lean-forward="false" selection-start-line="890" selection-start-column="6" selection-end-line="890" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="71" column="53" lean-forward="false" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,17 +1195,7 @@
         <state relative-caret-position="1728">
           <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
-            <element signature="e#102#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/file/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5760">
-          <caret line="165" column="34" lean-forward="false" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
-          <folding>
-            <element signature="e#78#101#0" expanded="true" />
+            <element signature="e#102#131#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1318,16 +1205,8 @@
         <state relative-caret-position="3060">
           <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
-            <element signature="e#100#139#0" expanded="true" />
+            <element signature="e#100#139#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text_to_excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1336,7 +1215,7 @@
         <state relative-caret-position="3888">
           <caret line="117" column="46" lean-forward="false" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
           <folding>
-            <element signature="e#50#79#0" expanded="true" />
+            <element signature="e#50#79#0" expanded="false" />
             <marker date="1500174143518" expanded="true" signature="106:430" ph="import ..." />
           </folding>
         </state>
@@ -1344,9 +1223,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/datatable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="1159">
+          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_files/make_test_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_files/111111111111 aaa.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="2000" column="0" lean-forward="true" selection-start-line="2000" selection-start-column="0" selection-end-line="2000" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/file/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+          <folding>
+            <element signature="e#78#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/xlwings/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/file/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/win32com/client/dynamic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/win32com/client/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/list2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2304">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/sheetdata/sheetinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text_to_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#400#429#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

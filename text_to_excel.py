@@ -18,8 +18,8 @@ __version__ = '1.0.1'
 from PyQt5.QtWidgets import *
 from gui.messages import ErrorMessage
 from gui.mainwindow import MainWindow
-from xlwings import *
 import sys
+from basic.file.files import ExcelFile
 
 app = QApplication(sys.argv)
 if __name__ == "__main__":
@@ -31,11 +31,7 @@ if __name__ == "__main__":
         errorMessage.setText("<nobr>The version of Python must be 3.6 or higher.</nobr>")
         sys.exit(app.exec_())
 
-excelApp = App()
-excelApp.visible = False
-excelApp.display_alerts = False
-for book in excelApp.books:
-    book.close()
+ExcelFile.open_excel_app()
 win = MainWindow()
 win.resize(3000, 1000)
 win.show()
@@ -44,7 +40,5 @@ try:
 except Exception as e:
     print(e)
 finally:
-    for book in excelApp.books:
-        book.close()
-    excelApp.quit()
+    ExcelFile.close_excel_app()
 

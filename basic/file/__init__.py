@@ -114,6 +114,7 @@ def text_to_excel(data_table: Table[TextFile, str, SheetData], excel_file: Excel
                     excel.sheets[sd.sheet_name].clear()
                     print(str_to_matrix(tf.get_data()).contents())
                     excel.sheets[sd.sheet_name].range((1, 1)).value = str_to_matrix(tf.get_data()).contents()
+                    excel.sheets[sd.sheet_name].autofit('r')
                     path = tf.path
                 for si in sheet_infos:
                     si.apply_info_to_sheet(excel.sheets[sd.sheet_name], sd[si])

@@ -142,6 +142,22 @@ class ExcelFile(File):
         FORMAT: the format of Excel file, which is ".xlsx".
     """
     FORMAT = ".xlsx"
+    excel_app = None
+
+    @classmethod
+    def open_excel_app(cls):
+        cls.excel_app = xw.App()
+        cls.excel_app.visible = False
+        cls.excel_app.display_alerts = False
+        print("Excel " + str(cls.excel_app) + " is opened.")
+
+    @classmethod
+    def close_excel_app(cls):
+        for book in cls.excel_app.books:
+            book.close()
+        cls.excel_app.quit()
+        print("Excel " + str(cls.excel_app) + " is closed.")
+        cls.excel_app = None
 
     def __init__(self, full_name: str):
         """Constructor with full name string.
@@ -173,7 +189,7 @@ class ExcelFile(File):
         except: pass
         copyfile(self._full_name, self._temp_excel)
         os.popen('attrib +h ' + self._temp_excel).close() # hide temp file
-        self._current_book = xw.Book(self._temp_excel)
+        self._current_book = ExcelFile.excel_app.books.open(self._temp_excel)
         return self._current_book
 
     def close(self) -> None:
