@@ -20,6 +20,7 @@ from gui.messages import ErrorMessage
 from gui.mainwindow import MainWindow
 import sys
 from basic.file.files import ExcelFile
+from win32api import GetSystemMetrics
 
 app = QApplication(sys.argv)
 if __name__ == "__main__":
@@ -33,7 +34,7 @@ if __name__ == "__main__":
 
 ExcelFile.open_excel_app()
 win = MainWindow()
-win.resize(3000, 1000)
+win.resize(GetSystemMetrics(0) * 3 / 4.0, GetSystemMetrics(1) * 3 / 5.0)
 win.show()
 try:
     app.exec_()
