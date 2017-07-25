@@ -30,7 +30,7 @@ def str_to_matrix(s: str) -> Matrix[str]:
         col = 0
         line_exist = False
 
-        for cell in line.split():
+        for cell in line.split('\t'):
             if cell is not "":
                 result.insert(cell, row, col)
                 line_exist = True
@@ -110,14 +110,14 @@ def text_to_excel(data_table: Table[TextFile, str, SheetData], excel_file: Excel
         with excel_file as excel:
             for sd in data_table.header_h:
                 tf = data_table.get_with_header(serial, sd)
+                sheet = excel.sheets[sd.sheet_name]
                 if tf is not None:
-                    excel.sheets[sd.sheet_name].clear()
-                    print(str_to_matrix(tf.get_data()).contents())
-                    excel.sheets[sd.sheet_name].range((1, 1)).value = str_to_matrix(tf.get_data()).contents()
-                    excel.sheets[sd.sheet_name].autofit('r')
+                    sheet.clear()
+                    sheet.range((1, 1)).value = str_to_matrix(tf.get_data()).contents()
+                    sheet.autofit('r')
                     path = tf.path
                 for si in sheet_infos:
-                    si.apply_info_to_sheet(excel.sheets[sd.sheet_name], sd[si])
+                    si.apply_info_to_sheet(sheet, sd[si])
             excel_file.save_file_name = path + "\\" + serial + " " + save_name \
                                         + (" " if len(save_name) != 0 else "") \
                                         + datetime.now().strftime("%y%m%d-%H%M") + ".xlsx"

@@ -41,7 +41,6 @@ class SheetInfo(Generic[S]):
         """
         pass
 
-
 class MissingValueInfo(SheetInfo[str]):
     """ This class tells how to manipulate a worksheet in terms of missing values. """
     def __init__(self):
@@ -56,6 +55,8 @@ class MissingValueInfo(SheetInfo[str]):
                     value, it will separate with white spaces.
         """
         missing_values = value.split()
+        if len(missing_values) == 0: return
+
         data = sheet.range('A1').expand().options(ndim=2).value
 
         for row in range(len(data)):
