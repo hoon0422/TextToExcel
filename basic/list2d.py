@@ -149,7 +149,7 @@ class Matrix(Generic[T]):
         return result
 
     def __eq__(self, other):
-        if isinstance(other, Matrix[T]):
+        if isinstance(other, Matrix):
             if self.n_row != other.n_row or self.n_col != other.n_col:
                 return False
 
