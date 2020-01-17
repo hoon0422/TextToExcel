@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text_to_excel.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/file/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/dialogs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_to_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_to_excel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +229,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text_to_excel.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\yhjeo\Desktop\JYH\Text to Excel\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -347,6 +348,8 @@
       <option name="presentableId" value="Default" />
       <updated>1498947048670</updated>
       <workItem from="1579225316290" duration="6128000" />
+      <workItem from="1579272945888" duration="1431000" />
+      <workItem from="1579274387607" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <created>1500174369321</created>
@@ -383,10 +386,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1579228076999" />
-    <state x="624" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1579225317072">
+    <state x="624" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1579274401571">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579225317072" />
+    <state x="624" y="365" key="com.intellij.ide.util.TipDialog/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1579274401571" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

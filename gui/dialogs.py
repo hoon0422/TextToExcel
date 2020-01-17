@@ -157,7 +157,7 @@ class DlgAboutProgram(QDialog):
     LBL_VERSION = QLabel("Version")
     LBL_VERSION.setTextInteractionFlags(Qt.TextSelectableByMouse | Qt.TextSelectableByKeyboard)
     layout.setWidget(1, QFormLayout.LabelRole, LBL_VERSION)
-    VERSION = QLabel("1.0.1")
+    VERSION = QLabel("1.1.0")
     VERSION.setTextInteractionFlags(Qt.TextSelectableByMouse | Qt.TextSelectableByKeyboard)
     layout.setWidget(1, QFormLayout.FieldRole, VERSION)
     LBL_PRGMMR = QLabel("Programmer")
