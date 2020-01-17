@@ -7,7 +7,7 @@ from PyQt5.QtCore import *
 from gui.datatable import DataTable
 from gui.messages import ErrorMessage, WaitingMessage, InformMessage
 from typing import List
-from basic.file import text_to_excel
+from basic.file import text_to_excel, merge_specified_range
 from basic.file.files import TextFile, ExcelFile
 from basic.sheetdata.sheetdata import SheetData
 from basic.list2d import Table
@@ -27,13 +27,15 @@ class DlgSaveFileName(QDialog):
           _bt_cancel: a button to quit the dialog.
   """
 
-  def __init__(self, excel: ExcelFile, data_table: DataTable, sheet_data_list: List[SheetData]):
+  def __init__(self, excel: ExcelFile, data_table: DataTable, sheet_data_list: List[SheetData], excel_range: str):
     super(DlgSaveFileName, self).__init__()
     self._edt_all_name = QLineEdit()
+    self._edt_excel_range = QLineEdit()
     self._names: List[QLineEdit] = []
     self._excel_file = excel
     self._data_table = data_table
     self._sheet_data_list = sheet_data_list
+    self._excel_range = excel_range
     self._bt_start_load = QPushButton("Start Load")
     self._bt_cancel = QPushButton("Cancel")
 
@@ -44,14 +46,18 @@ class DlgSaveFileName(QDialog):
       self._names.append(edt_name)
       name_layout.addRow(QLabel(serial), edt_name)
 
+    range_layout = QFormLayout()
+    range_layout.addRow(QLabel('Name of a File to Merge Data'), self._edt_excel_range)
+
     button_layout = QHBoxLayout()
     button_layout.addSpacerItem(QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum))
     button_layout.addWidget(self._bt_start_load)
     button_layout.addWidget(self._bt_cancel)
 
     layout = QVBoxLayout()
-    layout.addWidget(QLabel("Excel Name Format: [Serial] [Name] [Date(YYMMDD-HHMM)].xlsx"))
+    layout.addWidget(QLabel("Excel Name Format from Text File: [Serial] [Name] [Date(YYMMDD-HHMM)].xlsx"))
     layout.addLayout(name_layout, 1)
+    layout.addLayout(range_layout, 1)
     layout.addLayout(button_layout)
 
     self.setLayout(layout)
@@ -80,6 +86,26 @@ class DlgSaveFileName(QDialog):
       else:
         names.append(n.text())
 
+    excel_range_file_name = self._edt_excel_range.text()
+    if excel_range_file_name == "":
+      error_mb = ErrorMessage("<nobr>File to merge data contain more than 1 letter.</nobr>")
+      error_mb.show()
+      error_mb.exec_()
+      return
+
+    if excel_range_file_name.count('\\') > 0 \
+        or excel_range_file_name.count('/') > 0 \
+        or excel_range_file_name.count(':') > 0 \
+        or excel_range_file_name.count('*') > 0 \
+        or excel_range_file_name.count('?') > 0 \
+        or excel_range_file_name.count('<') > 0 \
+        or excel_range_file_name.count('>') > 0 \
+        or excel_range_file_name.count('|') > 0:
+      error_mb = ErrorMessage("<nobr>File name must not contain / \\ : * ? < > |</nobr>")
+      error_mb.show()
+      error_mb.exec_()
+      return
+
     loading_mb = WaitingMessage("<nobr>Loading data to excel files...</nobr>")
     loading_mb.show()
 
@@ -91,9 +117,13 @@ class DlgSaveFileName(QDialog):
       table.insert(self._data_table.get(r, c), r, c)
 
     try:
-      text_to_excel(table, self._excel_file, names)
+      final_names = text_to_excel(table, self._excel_file, names)
+      path = final_names[0][0: final_names[0].rfind('\\') + 1]
+      merge_specified_range(final_names, self._excel_range, path + excel_range_file_name)
     except Exception as e:
       error_mb = ErrorMessage("<nobr>Error: " + str(e) + "</nobr>")
+      import traceback
+      traceback.print_exc()
       error_mb.show()
       error_mb.exec_()
     loading_mb.accept()

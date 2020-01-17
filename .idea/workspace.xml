@@ -7,14 +7,8 @@
     <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/file/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/file/files.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/datatable.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/datatable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/dialogs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/mainwindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +68,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="asd!a1:a2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />

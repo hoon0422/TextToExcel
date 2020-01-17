@@ -8,6 +8,7 @@ from gui.template import *
 from gui.datalist import *
 from gui.dialogs import *
 from gui.sheetkeyword import *
+from gui.copiedrange import *
 
 
 class MainWindow(QMainWindow):
@@ -29,6 +30,7 @@ class MainWindow(QMainWindow):
     self._sheet_info = WgtSheetInfo()
     self._data_table = WgtDataTable()
     self._keyword = WgtKeyword()
+    self._range = WgtCopiedRange()
 
     self._data_table.data_table.set_keyword(self._keyword.keyword())
 
@@ -36,6 +38,7 @@ class MainWindow(QMainWindow):
     left_layout = QVBoxLayout()
     left_layout.addWidget(self._template)
     left_layout.addWidget(self._keyword)
+    left_layout.addWidget(self._range)
     left_layout.addWidget(self._data_list, stretch=6)
     left_widget = QFrame()
     left_widget.setLayout(left_layout)
@@ -68,7 +71,8 @@ class MainWindow(QMainWindow):
     self._data_table.bt_set_save_file_names.clicked.connect(
       lambda: DlgSaveFileName(self._template.template,
                               self._data_table.data_table.get_table(),
-                              self._sheet_info.info_table.get_sheet_data()).show())
+                              self._sheet_info.info_table.get_sheet_data(),
+                              self._range.excel_range()).show())
     self._keyword.keyword_changed.connect(self._data_table.data_table.set_keyword)
 
     self.setWindowTitle("Text to Excel")

@@ -1,7 +1,7 @@
 """
  This package has functions and classes for files.
 """
-
+import re
 from datetime import datetime
 from itertools import product
 from typing import List
@@ -14,7 +14,7 @@ from basic.file.files import TextFile, ExcelFile, SerialGroup
 from basic.list2d import Matrix, Table
 from basic.sheetdata.sheetinfo import sheet_infos
 
-__all__ = ["files", "group_data_files"]
+__all__ = ["files", "group_data_files", "text_to_excel", "merge_specified_range"]
 
 
 def str_to_matrix(s: str) -> Matrix[str]:
@@ -106,6 +106,7 @@ def text_to_excel(data_table: Table[TextFile, str, SheetData], excel_file: Excel
   :param save_names: a list of file names for new Excel files.
   """
   path = excel_file.path
+  final_names = []
 
   for serial, save_name in zip(data_table.header_v, save_names):
     with excel_file as excel:
@@ -119,6 +120,29 @@ def text_to_excel(data_table: Table[TextFile, str, SheetData], excel_file: Excel
           path = tf.path
         for si in sheet_infos:
           si.apply_info_to_sheet(sheet, sd[si])
-      excel_file.save_file_name = path + "\\" + serial + " " + save_name \
-                                  + (" " if len(save_name) != 0 else "") \
-                                  + datetime.now().strftime("%y%m%d-%H%M") + ".xlsx"
+      file_name = path + "\\" + serial + " " + save_name \
+                  + (" " if len(save_name) != 0 else "") \
+                  + datetime.now().strftime("%y%m%d-%H%M") + ".xlsx"
+      final_names.append(file_name)
+      excel_file.save_file_name = file_name
+
+  return final_names
+
+
+def merge_specified_range(excel_file_names: List[str], excel_range: str, save_name: str, path=''):
+  p = re.compile(
+    r"([^:\\/?*\[\]]{1,31}\'!|[^:\\/?*\[\]]{1,31}!)(\$?[a-z]{1,3}\$?[0-9]{1,7}(:\$?[a-z]{1,3}\$?[0-9]{1,7})?|\$[a-z]{1,3}:\$[a-z]{1,3}|[a-z]{1,3}:[a-z]{1,3}|\$[0-9]{1,7}:\$[0-9]{1,7}|[0-9]{1,7}:[0-9]{1,7}|[a-z_\\][a-z0-9_.]{0,254})")
+  if not p.match(excel_range):
+    raise Exception("'" + excel_range + "' is not a valid Excel range address.")
+
+  merged = xw.Book()
+  sheet_name = excel_range[0:excel_range.find('!')]
+
+  current_row = 1
+  for excel_file_name in excel_file_names:
+    excel_file = xw.books.open(path + excel_file_name)
+    copied_range = excel_file.sheets[sheet_name].range(excel_range)
+    copied_range.copy(merged.sheets[0].range('A' + str(current_row)))
+    current_row += copied_range.rows.count
+  print(path + save_name)
+  merged.save(path + save_name)
