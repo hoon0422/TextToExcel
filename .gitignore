@@ -1,8 +1,8 @@
 # test files
-/test_files
+test_files/
 
 # IDE
-/.idea
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

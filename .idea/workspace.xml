@@ -4,13 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_to_excel.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/dialogs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_to_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_to_excel.py" afterDir="false" />
-    </list>
+    <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -349,7 +343,7 @@
       <updated>1498947048670</updated>
       <workItem from="1579225316290" duration="6128000" />
       <workItem from="1579272945888" duration="1431000" />
-      <workItem from="1579274387607" duration="1095000" />
+      <workItem from="1579274387607" duration="1284000" />
     </task>
     <task id="LOCAL-00001" summary="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <created>1500174369321</created>
