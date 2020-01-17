@@ -5,7 +5,6 @@
 import abc
 from xlwings import Sheet
 from typing import TypeVar, Generic, List
-from itertools import product
 
 S = TypeVar('S')
 
@@ -14,7 +13,7 @@ class SheetInfo(Generic[S]):
   """ This abstract class represents information of how to manipulate a worksheet.
 
         Attribute:
-            _infom_name: the name of an information.
+            _info_name: the name of an information.
     """
   __metaclass__ = abc.ABCMeta
 

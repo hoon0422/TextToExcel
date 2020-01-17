@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
 
       Attributes:
           _template: WgtTemplate object
-          _data_liat: WgtDataList object
+          _data_list: WgtDataList object
           _sheet_info: WgtSheetInfo object
           _data_table: WgtDataTable object
           _keyword: WgtKeyword object.
@@ -33,16 +33,16 @@ class MainWindow(QMainWindow):
     self._data_table.data_table.set_keyword(self._keyword.keyword())
 
     # layouts
-    leftLayout = QVBoxLayout()
-    leftLayout.addWidget(self._template)
-    leftLayout.addWidget(self._keyword)
-    leftLayout.addWidget(self._data_list, stretch=6)
-    leftWidget = QFrame()
-    leftWidget.setLayout(leftLayout)
-    leftWidget.setFrameShape(QFrame.StyledPanel)
+    left_layout = QVBoxLayout()
+    left_layout.addWidget(self._template)
+    left_layout.addWidget(self._keyword)
+    left_layout.addWidget(self._data_list, stretch=6)
+    left_widget = QFrame()
+    left_widget.setLayout(left_layout)
+    left_widget.setFrameShape(QFrame.StyledPanel)
 
     splitter = QSplitter(Qt.Horizontal)
-    splitter.addWidget(leftWidget)
+    splitter.addWidget(left_widget)
     splitter.addWidget(self._sheet_info)
     splitter.addWidget(self._data_table)
     splitter.setChildrenCollapsible(False)

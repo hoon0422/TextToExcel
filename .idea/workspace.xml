@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/errors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/file/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/file/files.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/list2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/list2d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/sheetdata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/sheetdata/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/sheetdata/sheetdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/sheetdata/sheetdata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/sheetdata/sheetinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/datalist.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/datalist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/datatable.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/datatable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/dialogs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/mainwindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/messages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/sheetinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/sheetinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/sheetkeyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/sheetkeyword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/template.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,52 +59,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>row</find>
-      <find>\t</find>
-      <find>overload</find>
-      <find>open</find>
-      <find>WgtTemplate.__current_directory</find>
-      <find>current_directory</find>
-      <find>.txt</find>
-      <find>List[Text</find>
-      <find>emit</find>
-      <find>try</find>
-      <find>WgtDataList.</find>
-      <find>changed</find>
-      <find>info_type</find>
-      <find>info_type()</find>
-      <find>search</find>
-      <find>all</find>
-      <find>__make_connected_cell</find>
-      <find>_templateWidget</find>
-      <find>scroll</find>
-      <find>widgets</find>
-      <find>Table[TextFile, str, str]</find>
-      <find>sheet name;</find>
-      <find>sheet name:</find>
-      <find>keyword</find>
-      <find>QtCore.</find>
-      <find>DlgAboutProgram</find>
-      <find>self.</find>
-      <find>copyfile</find>
-      <find>book.sheets[sheetName]</find>
-      <find>excel.sheets[sd.sheet_name]</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>save_file_name</replace>
-      <replace>value</replace>
-      <replace>list_2d</replace>
-      <replace>col</replace>
-      <replace />
-      <replace>info_type()</replace>
-      <replace>info_type</replace>
-      <replace>gui</replace>
-      <replace>DataTable</replace>
-      <replace>sheet</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -316,7 +263,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in C:/Users/yhjeo/Desktop/JYH/Text to Excel/test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="TextToExcel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -370,13 +317,13 @@
       <item itemvalue="Python.TextToExcel" />
       <item itemvalue="Python.text_to_excel" />
       <item itemvalue="Python.make_test_txt" />
-      <item itemvalue="Python tests.Unittests in test.py" />
+      <item itemvalue="Python tests.Unittests in C:/Users/yhjeo/Desktop/JYH/Text to Excel/test.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.text_to_excel" />
         <item itemvalue="Python.make_test_txt" />
-        <item itemvalue="Python tests.Unittests in test.py" />
+        <item itemvalue="Python tests.Unittests in C:/Users/yhjeo/Desktop/JYH/Text to Excel/test.py" />
         <item itemvalue="Python.mainwindow" />
         <item itemvalue="Python.TextToExcel" />
       </list>
@@ -404,7 +351,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498947048670</updated>
-      <workItem from="1579225316290" duration="2661000" />
+      <workItem from="1579225316290" duration="6128000" />
     </task>
     <task id="LOCAL-00001" summary="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <created>1500174369321</created>

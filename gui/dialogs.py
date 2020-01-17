@@ -115,7 +115,7 @@ class DlgAboutProgram(QDialog):
 
     self.setWindowModality(Qt.ApplicationModal)
 
-    verticalLayout = QVBoxLayout()
+    vertical_layout = QVBoxLayout()
     layout = QFormLayout()
     layout.setHorizontalSpacing(50)
     LBL_PRGM_NAME = QLabel("Program Name")
@@ -142,10 +142,10 @@ class DlgAboutProgram(QDialog):
     E_MAIL = QLabel("yhjeong0422@gmail.com")
     E_MAIL.setTextInteractionFlags(Qt.TextSelectableByMouse | Qt.TextSelectableByKeyboard)
     layout.setWidget(3, QFormLayout.FieldRole, E_MAIL)
-    verticalLayout.addLayout(layout)
+    vertical_layout.addLayout(layout)
     LBL_MSG = QLabel("If there is any bug, please send it to my e-mail!")
     LBL_MSG.setTextInteractionFlags(Qt.TextSelectableByMouse | Qt.TextSelectableByKeyboard)
-    verticalLayout.addWidget(LBL_MSG)
+    vertical_layout.addWidget(LBL_MSG)
 
-    self.setLayout(verticalLayout)
+    self.setLayout(vertical_layout)
     self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)

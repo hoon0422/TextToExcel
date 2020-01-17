@@ -66,7 +66,7 @@ class DataDecisionTable(QTableWidget):
       Attributes:
           _serial_groups: list of "SerialGroup"s
           _sheet_list: list of worksheet names.
-          _heyword: a keyword that the name of all worksheet for data has.
+          _keyword: a keyword that the name of all worksheet for data has.
   """
 
   def __init__(self):

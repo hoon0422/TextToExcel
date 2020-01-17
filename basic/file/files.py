@@ -43,32 +43,32 @@ class File(object):
     # check there is a file.
     try:
       file = open(full_name)
-    except:
+    except BaseException:
       raise FileNotFoundError
 
     # find slash(/, \) symbol for name
-    slashIdx = full_name.rfind('/')
-    if slashIdx == -1: slashIdx = full_name.rfind('\\')
-    if slashIdx == -1: raise InvalidFileNameError("Cannot find '/' symbol.")
+    slash_idx = full_name.rfind('/')
+    if slash_idx == -1: slash_idx = full_name.rfind('\\')
+    if slash_idx == -1: raise InvalidFileNameError("Cannot find '/' symbol.")
     full_name = full_name.replace('/', '\\')
 
     # find dot(.) symbol for format
-    dotIdx = full_name.rfind('.')
-    if dotIdx == -1: raise InvalidFileNameError("Cannot find '.' symbol.")
+    dot_idx = full_name.rfind('.')
+    if dot_idx == -1: raise InvalidFileNameError("Cannot find '.' symbol.")
 
     # the number of letters for name must be bigger than the number of serial letters
-    if self._using_serial and len(full_name[slashIdx + 1: dotIdx]) <= File.N_SERIALS:
+    if self._using_serial and len(full_name[slash_idx + 1: dot_idx]) <= File.N_SERIALS:
       raise TooShortFileNameError("File name is too short. Must be bigger than 12")
 
     # assignment
     self._full_name = full_name
-    self._path = full_name[:slashIdx]
-    self._file_format = full_name[dotIdx:]
+    self._path = full_name[:slash_idx]
+    self._file_format = full_name[dot_idx:]
     if using_serial:
-      self._name = full_name[slashIdx + 1 + File.N_SERIALS + 1: dotIdx]
-      self._serial = full_name[slashIdx + 1:][:File.N_SERIALS]
+      self._name = full_name[slash_idx + 1 + File.N_SERIALS + 1: dot_idx]
+      self._serial = full_name[slash_idx + 1:][:File.N_SERIALS]
     else:
-      self._name = full_name[slashIdx + 1: dotIdx]
+      self._name = full_name[slash_idx + 1: dot_idx]
 
   # Getters
   @property
@@ -182,7 +182,7 @@ class ExcelFile(File):
     self._temp_excel = self._path + "\\~$" + self._name + "_~$TEMP~$" + self.FORMAT
     try:
       os.remove(self._temp_excel)
-    except:
+    except BaseException:
       pass
     copyfile(self._full_name, self._temp_excel)
     os.popen('attrib +h ' + self._temp_excel).close()  # hide temp file
@@ -232,7 +232,7 @@ class SerialGroup(object):
     return self._data_list[item]
 
   def __setitem__(self, index: int, value: TextFile) -> None:
-    self.__checkFile(value)
+    self.__check_file(value)
     self._data_list.__setitem__(index, value)
 
   def __delitem__(self, key) -> None:
@@ -250,14 +250,14 @@ class SerialGroup(object):
     self._data_list.clear()
 
   def insert(self, index: int, value: TextFile) -> None:
-    self.__checkFile(value)
+    self.__check_file(value)
     self._data_list.insert(index, value)
 
   def append(self, value: TextFile):
-    self.__checkFile(value)
+    self.__check_file(value)
     self._data_list.append(value)
 
-  def __checkFile(self, file: TextFile) -> None:
+  def __check_file(self, file: TextFile) -> None:
     if isinstance(file, TextFile) is False: raise TypeError(file.__str__() + " is not 'TextFile' object.")
     if file.using_serial is False: raise NoSerialExistError(file.__str__() + " does not use serial.")
 

@@ -14,7 +14,7 @@ from basic.file.files import TextFile, ExcelFile, SerialGroup
 from basic.list2d import Matrix, Table
 from basic.sheetdata.sheetinfo import sheet_infos
 
-__all__ = ["files"]
+__all__ = ["files", "group_data_files"]
 
 
 def str_to_matrix(s: str) -> Matrix[str]:
