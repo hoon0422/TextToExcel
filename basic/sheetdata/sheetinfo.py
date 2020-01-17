@@ -5,78 +5,82 @@
 import abc
 from xlwings import Sheet
 from typing import TypeVar, Generic, List
-from itertools import product
 
 S = TypeVar('S')
+
+
 class SheetInfo(Generic[S]):
-    """ This abstract class represents information of how to manipulate a worksheet.
+  """ This abstract class represents information of how to manipulate a worksheet.
 
         Attribute:
-            _infom_name: the name of an information.
+            _info_name: the name of an information.
     """
-    __metaclass__ = abc.ABCMeta
+  __metaclass__ = abc.ABCMeta
 
-    def __init__(self, info_name: str):
-        self._info_name = info_name
+  def __init__(self, info_name: str):
+    self._info_name = info_name
 
-    # Getters
-    @property
-    def info_name(self):
-        return self._info_name
+  # Getters
+  @property
+  def info_name(self):
+    return self._info_name
 
-    @property
-    @abc.abstractmethod
-    def info_type(self) -> type:
-        """
+  @property
+  @abc.abstractmethod
+  def info_type(self) -> type:
+    """
         :return: A type of information data. For example, if data type is str, return str.
         """
-        pass
+    pass
 
-    @abc.abstractmethod
-    def apply_info_to_sheet(self, sheet: Sheet, value: S):
-        """
+  @abc.abstractmethod
+  def apply_info_to_sheet(self, sheet: Sheet, value: S):
+    """
         Manipulates a worksheet with the specified value.
         :param sheet: a worksheet which will be manipulated
         :param value: a value used when manipulating
         """
-        pass
+    pass
 
 
 class MissingValueInfo(SheetInfo[str]):
-    """ This class tells how to manipulate a worksheet in terms of missing values. """
-    def __init__(self):
-        super(MissingValueInfo, self).__init__("Missing Value Info")
+  """ This class tells how to manipulate a worksheet in terms of missing values. """
 
-    def apply_info_to_sheet(self, sheet: Sheet, value: str):
-        """
+  def __init__(self):
+    super(MissingValueInfo, self).__init__("Missing Value Info")
+
+  def apply_info_to_sheet(self, sheet: Sheet, value: str):
+    """
         Manipulates a worksheet with the specified value.
         It removes the value in the worksheet.
         :param sheet: a worksheet which will be manipulated
         :param value: a value used when manipulating. In this case, missing values. If there are more than one
                     value, it will separate with white spaces.
         """
-        missing_values = value.split()
-        data = sheet.range('A1').expand().options(ndim=2).value
+    missing_values = value.split()
+    if len(missing_values) == 0: return
 
-        for row in range(len(data)):
-            for col in range(len(data[row])):
-                for mv in missing_values:
-                    try:
-                        if float(mv) == data[row][col]:
-                            data[row][col] = None
-                    except:
-                        if mv == data[row][col]:
-                            data[row][col] = None
+    data = sheet.range('A1').expand().options(ndim=2).value
 
-        sheet.range((1,1)).value = data
+    for row in range(len(data)):
+      for col in range(len(data[row])):
+        for mv in missing_values:
+          try:
+            if float(mv) == data[row][col]:
+              data[row][col] = None
+          except:
+            if mv == data[row][col]:
+              data[row][col] = None
 
-    @property
-    def info_type(self) -> type:
-        """
+    sheet.range((1, 1)).value = data
+
+  @property
+  def info_type(self) -> type:
+    """
         :return: A type of information data. For example, if data type is str, return str.
         """
-        return str
+    return str
 
 
-sheet_infos: List[SheetInfo] = [] # global variable that contains "SheetInfo"s.
+sheet_infos: List[SheetInfo] = []  # global variable that contains "SheetInfo"s.
 sheet_infos.append(MissingValueInfo())

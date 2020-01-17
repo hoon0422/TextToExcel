@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TextToExcel.iml" filepath="$PROJECT_DIR$/.idea/TextToExcel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Text to Excel.iml" filepath="$PROJECT_DIR$/.idea/Text to Excel.iml" />
     </modules>
   </component>
 </project>
