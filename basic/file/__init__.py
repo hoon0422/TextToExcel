@@ -31,10 +31,9 @@ def str_to_matrix(s: str) -> Matrix[str]:
     line_exist = False
 
     for cell in line.split('\t'):
-      if cell is not "":
-        result.insert(cell, row, col)
-        line_exist = True
-        col += 1
+      result.insert(cell, row, col)
+      line_exist = True
+      col += 1
 
     if line_exist:
       row += 1
