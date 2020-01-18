@@ -53,7 +53,7 @@ class WgtTemplate(QFrame):
       self._template = ExcelFile(excel_file_name)
       for app in xw.apps:
         for book in app.books:
-          if book.fullname.upper() == self._template._full_name.upper():
+          if book.fullname.upper() == self._template.full_name.upper():
             raise OSError("Another program use the file. Please close the program.")
       self.template_changed.emit(self._template)
       loading_mb.accept()

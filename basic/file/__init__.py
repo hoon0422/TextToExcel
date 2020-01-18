@@ -114,7 +114,6 @@ def text_to_excel(data_table: Table[TextFile, str, SheetData], excel_file: Excel
         tf = data_table.get_with_header(serial, sd)
         sheet = excel.sheets[sd.sheet_name]
         if tf is not None:
-          sheet.clear()
           sheet.range((1, 1)).value = str_to_matrix(tf.get_data()).contents()
           sheet.autofit('r')
           path = tf.path
@@ -142,7 +141,7 @@ def merge_specified_range(excel_file_names: List[str], excel_range: str, save_na
   for excel_file_name in excel_file_names:
     excel_file = xw.books.open(path + excel_file_name)
     copied_range = excel_file.sheets[sheet_name].range(excel_range)
-    copied_range.copy(merged.sheets[0].range('A' + str(current_row)))
+    merged.sheets[0].range('A' + str(current_row)).value = copied_range.value
     current_row += copied_range.rows.count
   print(path + save_name)
   merged.save(path + save_name)
