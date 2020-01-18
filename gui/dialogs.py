@@ -30,7 +30,7 @@ class DlgSaveFileName(QDialog):
   def __init__(self, excel: ExcelFile, data_table: DataTable, sheet_data_list: List[SheetData], excel_range: str):
     super(DlgSaveFileName, self).__init__()
     self._edt_all_name = QLineEdit()
-    self._edt_excel_range = QLineEdit()
+    self._edt_excel_range = self.__make_connected_edt() if len(excel_range) != 0 else None
     self._names: List[QLineEdit] = []
     self._excel_file = excel
     self._data_table = data_table
@@ -46,8 +46,9 @@ class DlgSaveFileName(QDialog):
       self._names.append(edt_name)
       name_layout.addRow(QLabel(serial), edt_name)
 
-    range_layout = QFormLayout()
-    range_layout.addRow(QLabel('Name of a File to Merge Data'), self._edt_excel_range)
+    if self._edt_excel_range:
+      range_layout = QFormLayout()
+      range_layout.addRow(QLabel('Name of a File to Merge Data'), self._edt_excel_range)
 
     button_layout = QHBoxLayout()
     button_layout.addSpacerItem(QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum))
@@ -57,7 +58,8 @@ class DlgSaveFileName(QDialog):
     layout = QVBoxLayout()
     layout.addWidget(QLabel("Excel Name Format from Text File: [Serial] [Name] [Date(YYMMDD-HHMM)].xlsx"))
     layout.addLayout(name_layout, 1)
-    layout.addLayout(range_layout, 1)
+    if self._edt_excel_range:
+      layout.addLayout(range_layout, 1)
     layout.addLayout(button_layout)
 
     self.setLayout(layout)
@@ -86,25 +88,22 @@ class DlgSaveFileName(QDialog):
       else:
         names.append(n.text())
 
-    excel_range_file_name = self._edt_excel_range.text()
-    if excel_range_file_name == "":
-      error_mb = ErrorMessage("<nobr>File to merge data contain more than 1 letter.</nobr>")
-      error_mb.show()
-      error_mb.exec_()
-      return
+    if self._edt_excel_range:
+      excel_range_file_name = self._edt_excel_range.text()
 
-    if excel_range_file_name.count('\\') > 0 \
-        or excel_range_file_name.count('/') > 0 \
-        or excel_range_file_name.count(':') > 0 \
-        or excel_range_file_name.count('*') > 0 \
-        or excel_range_file_name.count('?') > 0 \
-        or excel_range_file_name.count('<') > 0 \
-        or excel_range_file_name.count('>') > 0 \
-        or excel_range_file_name.count('|') > 0:
-      error_mb = ErrorMessage("<nobr>File name must not contain / \\ : * ? < > |</nobr>")
-      error_mb.show()
-      error_mb.exec_()
-      return
+    if self._edt_excel_range:
+      if excel_range_file_name.count('\\') > 0 \
+          or excel_range_file_name.count('/') > 0 \
+          or excel_range_file_name.count(':') > 0 \
+          or excel_range_file_name.count('*') > 0 \
+          or excel_range_file_name.count('?') > 0 \
+          or excel_range_file_name.count('<') > 0 \
+          or excel_range_file_name.count('>') > 0 \
+          or excel_range_file_name.count('|') > 0:
+        error_mb = ErrorMessage("<nobr>File name must not contain / \\ : * ? < > |</nobr>")
+        error_mb.show()
+        error_mb.exec_()
+        return
 
     loading_mb = WaitingMessage("<nobr>Loading data to excel files...</nobr>")
     loading_mb.show()
@@ -118,8 +117,9 @@ class DlgSaveFileName(QDialog):
 
     try:
       final_names = text_to_excel(table, self._excel_file, names)
-      path = final_names[0][0: final_names[0].rfind('\\') + 1]
-      merge_specified_range(final_names, self._excel_range, path + excel_range_file_name)
+      if self._edt_excel_range:
+        path = final_names[0][0: final_names[0].rfind('\\') + 1]
+        merge_specified_range(final_names, self._excel_range, path + excel_range_file_name)
     except Exception as e:
       error_mb = ErrorMessage("<nobr>Error: " + str(e) + "</nobr>")
       import traceback

@@ -9,6 +9,8 @@ from gui.datalist import *
 from gui.dialogs import *
 from gui.sheetkeyword import *
 from gui.copiedrange import *
+from basic.file import check_valid_range
+from gui.messages import ErrorMessage
 
 
 class MainWindow(QMainWindow):
@@ -68,11 +70,7 @@ class MainWindow(QMainWindow):
     self._template.template_changed.connect(self._sheet_info.info_table.set_excel_file)
     self._template.template_changed.connect(self._data_table.data_table.set_sheet_list)
     self._data_list.data_list.list_changed.connect(self._data_table.data_table.set_serial_groups)
-    self._data_table.bt_set_save_file_names.clicked.connect(
-      lambda: DlgSaveFileName(self._template.template,
-                              self._data_table.data_table.get_table(),
-                              self._sheet_info.info_table.get_sheet_data(),
-                              self._range.excel_range()).show())
+    self._data_table.bt_set_save_file_names.clicked.connect(self.__bt_set_save_file_names)
     self._keyword.keyword_changed.connect(self._data_table.data_table.set_keyword)
 
     self.setWindowTitle("Text to Excel")
@@ -81,6 +79,18 @@ class MainWindow(QMainWindow):
     dlg = DlgAboutProgram()
     dlg.show()
     dlg.exec_()
+
+  def __bt_set_save_file_names(self):
+    if check_valid_range(self._range.excel_range()):
+      DlgSaveFileName(self._template.template,
+                      self._data_table.data_table.get_table(),
+                      self._sheet_info.info_table.get_sheet_data(),
+                      self._range.excel_range()).show()
+    else:
+      error_mb = ErrorMessage("Not valid range. Please check range again")
+      error_mb.show()
+      error_mb.exec_()
+      return
 
 
 if __name__ == "__main__":
