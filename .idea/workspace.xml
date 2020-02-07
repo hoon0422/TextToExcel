@@ -6,9 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/file/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/file/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/dialogs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/clear_comtypes_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/clear_comtypes_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pywin32_postinstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pywin32_postinstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pywin32_testall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pywin32_testall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/xlwings.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/xlwings32-0.17.0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/xlwings64-0.17.0.dll" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +101,7 @@
     <property name="last.edited.regexp" value="asd!a1:a2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -80,7 +110,16 @@
       <recent name="C:\Users\yhjeo\odrive\[G] dudgns0422\dev\TextToExcel\basic_2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.text_to_excel">
+  <component name="RunManager" selected="Batch.text_to_excel">
+    <configuration name="text_to_excel" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="Text to Excel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\yhjeo\Desktop\Text_to_Excel" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="text_to_excel.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="TextToExcel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,28 +164,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TextToExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TextToExcel" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\yhjeo\odrive\[G] dudgns0422\dev\TextToExcel\text_to_excel.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -309,18 +326,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.mainwindow" />
-      <item itemvalue="Python.TextToExcel" />
       <item itemvalue="Python.text_to_excel" />
       <item itemvalue="Python.make_test_txt" />
       <item itemvalue="Python tests.Unittests in C:/Users/yhjeo/Desktop/JYH/Text to Excel/test.py" />
+      <item itemvalue="Batch.text_to_excel" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Batch.text_to_excel" />
         <item itemvalue="Python.text_to_excel" />
         <item itemvalue="Python.make_test_txt" />
         <item itemvalue="Python tests.Unittests in C:/Users/yhjeo/Desktop/JYH/Text to Excel/test.py" />
         <item itemvalue="Python.mainwindow" />
-        <item itemvalue="Python.TextToExcel" />
       </list>
     </recent_temporary>
   </component>
@@ -352,6 +369,7 @@
       <workItem from="1579318143568" duration="3490000" />
       <workItem from="1579360309217" duration="1893000" />
       <workItem from="1579366527553" duration="2731000" />
+      <workItem from="1581053578202" duration="255000" />
     </task>
     <task id="LOCAL-00001" summary="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <created>1500174369321</created>
@@ -384,14 +402,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="422" width="440" height="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579226436389" />
-    <state x="461" y="183" key="SettingsEditor" timestamp="1579228076999">
+    <state x="461" y="183" key="SettingsEditor" timestamp="1581053832922">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1579228076999" />
-    <state x="624" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1579366531229">
+    <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1581053832922" />
+    <state x="624" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1581053578566">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="624" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579225317072" />
+    <state x="624" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1581053578566" />
     <state x="624" y="365" key="com.intellij.ide.util.TipDialog/1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1579366531229" />
   </component>
   <component name="XDebuggerManager">
