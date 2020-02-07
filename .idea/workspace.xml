@@ -6,39 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e778b9fe-7aa7-4e46-8672-10f59ea5d58e" name="Default" comment="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/clear_comtypes_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/clear_comtypes_cache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.7.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.7.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pylupdate5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyrcc5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pyuic5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pywin32_postinstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pywin32_postinstall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pywin32_testall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pywin32_testall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/xlwings.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/xlwings32-0.17.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/xlwings64-0.17.0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +337,7 @@
       <workItem from="1579318143568" duration="3490000" />
       <workItem from="1579360309217" duration="1893000" />
       <workItem from="1579366527553" duration="2731000" />
-      <workItem from="1581053578202" duration="255000" />
+      <workItem from="1581053578202" duration="4022000" />
     </task>
     <task id="LOCAL-00001" summary="ver 1.0.1&#10;&#10;1. Changed the structure of the program.&#10;&#10;2. Drag and drop from file explorer is enabled.&#10;&#10;3. Bug fixed.&#10;&#10;    1) It can change template.&#10;    &#10;    2) User can open template file or another Excel file">
       <created>1500174369321</created>
@@ -402,6 +370,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="422" width="440" height="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579226436389" />
+    <state width="1876" height="274" key="GridCell.Tab.0.bottom" timestamp="1581057733416">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1581057733416" />
+    <state width="1876" height="274" key="GridCell.Tab.0.center" timestamp="1581057733414">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="274" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1581057733414" />
+    <state width="1876" height="274" key="GridCell.Tab.0.left" timestamp="1581057733413">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="274" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1581057733413" />
+    <state width="1876" height="274" key="GridCell.Tab.0.right" timestamp="1581057733415">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="274" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1581057733415" />
     <state x="461" y="183" key="SettingsEditor" timestamp="1581053832922">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
